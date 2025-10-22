@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Offer Services – HoodHelper</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+  <header class="top-bar">
+    <div class="logo">HoodHelper</div>
+    <nav class="nav-buttons">
+      <a href="index.html" class="btn secondary">Back</a>
+    </nav>
+  </header>
+
+  <section class="connect">
+    <h1>Offer Your Services</h1>
+    <p>Connect your email first – then create your profile.</p>
+
+    <form class="connect-form" netlify netlify-honeypot="bot-field" action="create-profile.html" method="POST">
+      <p class="hidden">
+        <label>Don’t fill this out: <input name="bot-field"></label>
+      </p>
+      <label>
+        Email Address *
+        <input type="email" name="email" required placeholder="you@example.com">
+      </label>
+      <label>
+        I agree to the terms & conditions
+        <input type="checkbox" required>
+      </label>
+      <button type="submit" class="btn primary">Connect & Continue</button>
+    </form>
+  </section>
+
+</body>
+</html>

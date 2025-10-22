@@ -19,7 +19,7 @@ body {
   line-height: 1.4;
 }
 
-/* TOP-BAR */
+/* TOP-BAR + DROPDOWN */
 .top-bar {
   display: flex;
   justify-content: space-between;
@@ -39,6 +39,7 @@ body {
 .nav-buttons {
   display: flex;
   gap: .75rem;
+  align-items: center;
 }
 .btn {
   padding: .55rem 1.1rem;
@@ -46,6 +47,8 @@ body {
   font-size: .9rem;
   text-decoration: none;
   transition: .2s;
+  border: none;
+  cursor: pointer;
 }
 .btn.primary {
   background: var(--dark);
@@ -64,6 +67,35 @@ body {
   color: #fff;
 }
 
+/* DROPDOWN */
+.dropdown {
+  position: relative;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background: #fff;
+  min-width: 160px;
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.dropdown-content a {
+  color: var(--dark);
+  padding: .75rem 1rem;
+  text-decoration: none;
+  display: block;
+  font-size: .85rem;
+}
+.dropdown-content a:hover {
+  background: var(--light);
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 /* HERO */
 .hero {
   background: var(--primary);
@@ -79,7 +111,7 @@ body {
   font-size: 1.1rem;
 }
 
-/* SUCH-BAR */
+/* SEARCH */
 .search-bar {
   display: flex;
   flex-wrap: wrap;
@@ -105,46 +137,15 @@ body {
   background: #000;
 }
 
-/* CARDS */
-.cards {
-  padding: 3rem 1rem;
-}
-.cards h2 {
+/* NO HELPERS */
+.no-helpers {
   text-align: center;
-  margin-bottom: 1.5rem;
-}
-.grid {
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  max-width: 1000px;
-  margin: 0 auto;
-}
-.card {
-  background: #fff;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem;
-}
-.card img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-.info h3 {
+  padding: 3rem 1rem;
   font-size: 1.1rem;
 }
-.stars {
-  color: #ffa41c;
-  font-size: .9rem;
-}
-.city {
-  font-size: .85rem;
-  color: #555;
+.no-helpers a {
+  color: var(--dark);
+  font-weight: 600;
 }
 
 /* MOBILE */

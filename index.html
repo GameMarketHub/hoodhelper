@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <title>HoodHelper</title>
@@ -11,9 +11,19 @@
   <!-- TOP-BAR -->
   <header class="top-bar">
     <div class="logo">HoodHelper</div>
+
     <nav class="nav-buttons">
-      <a href="anbieten.html" class="btn secondary">Anbieten</a>
-      <a href="konto.html" class="btn primary">Mein Konto</a>
+      <a href="offer.html" class="btn secondary">Offer Services</a>
+
+      <!-- My Account (Dropdown) -->
+      <div class="dropdown">
+        <button class="btn primary">My Account</button>
+        <div class="dropdown-content">
+          <a href="settings.html">Settings</a>
+          <a href="profile.html">Profile</a>
+          <a href="logout.html">Log Out</a>
+        </div>
+      </div>
     </nav>
   </header>
 
@@ -22,7 +32,7 @@
     <h1>HoodHelper</h1>
     <p>Your neighborhood heroes.<br>From small tasks to big help – right around the corner.</p>
 
-    <!-- SUCH-FORMULAR -->
+    <!-- SEARCH FORM -->
     <form class="search-bar" onsubmit="return false">
       <input type="text" placeholder="What are you looking for?" required>
       <input type="text" placeholder="Where?" required>
@@ -37,37 +47,9 @@
     </form>
   </section>
 
-  <!-- HELFER-CARDS -->
-  <section class="cards">
-    <h2>Top Helpers</h2>
-    <div class="grid">
-      <article class="card">
-        <img src="https://i.pravatar.cc/150?img=1" alt="Parker James">
-        <div class="info">
-          <h3>Parker James</h3>
-          <div class="stars">★★★★☆ <span>3.9</span></div>
-          <p class="city">Hamburg</p>
-        </div>
-      </article>
-
-      <article class="card">
-        <img src="https://i.pravatar.cc/150?img=2" alt="Angel Morris">
-        <div class="info">
-          <h3>Angel Morris</h3>
-          <div class="stars">★★★★☆ <span>4.0</span></div>
-          <p class="city">Munich</p>
-        </div>
-      </article>
-
-      <article class="card">
-        <img src="https://i.pravatar.cc/150?img=3" alt="Eli Hall">
-        <div class="info">
-          <h3>Eli Hall</h3>
-          <div class="stars">★★★★☆ <span>4.1</span></div>
-          <p class="city">Leipzig</p>
-        </div>
-      </article>
-    </div>
+  <!-- NO HELPERS (placeholder) -->
+  <section class="no-helpers">
+    <p>No helpers available right now.<br>Be the first to <a href="offer.html">offer your service</a>!</p>
   </section>
 
 </body>
