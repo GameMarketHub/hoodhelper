@@ -1,0 +1,9 @@
+:root {
+  --primary: #7BFF7B;   /* Hellgrün */
+}
+body {
+  background: var(--primary);
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 5rem;
+}
