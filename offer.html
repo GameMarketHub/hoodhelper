@@ -15,23 +15,42 @@
     </nav>
   </header>
 
-  <section class="connect">
+  <!-- HERO -->
+  <section class="offer-hero">
     <h1>Offer Your Services</h1>
-    <p>Connect your email first – then create your profile.</p>
+    <p>Join thousands of helpers in your neighbourhood.</p>
+  </section>
 
-    <form class="connect-form" netlify netlify-honeypot="bot-field" action="create-profile.html" method="POST">
-      <p class="hidden">
-        <label>Don’t fill this out: <input name="bot-field"></label>
-      </p>
-      <label>
-        Email Address *
-        <input type="email" name="email" required placeholder="you@example.com">
+  <!-- PROGRESS -->
+  <div class="progress-bar">
+    <div class="step active">1. Connect</div>
+    <div class="step">2. Profile</div>
+    <div class="step">3. Go Live</div>
+  </div>
+
+  <!-- MAIN CARD -->
+  <section class="offer-card">
+    <div class="illu">
+      <span>🚀</span>
+    </div>
+
+    <h2>Connect your email</h2>
+    <p class="sub">We’ll send you job requests and important updates.</p>
+
+    <form class="pro-form" netlify netlify-honeypot="bot-field" action="create-profile.html" method="POST">
+      <p class="hidden"><label>Don’t fill this out: <input name="bot-field"></label></p>
+
+      <label class="float-label">
+        <input type="email" name="email" required placeholder=" ">
+        <span>Email Address *</span>
       </label>
-      <label>
-        I agree to the terms & conditions
+
+      <label class="check-label">
         <input type="checkbox" required>
+        <span>I agree to the <a href="#" target="_blank">terms & conditions</a></span>
       </label>
-      <button type="submit" class="btn primary">Connect & Continue</button>
+
+      <button type="submit" class="btn primary">Continue →</button>
     </form>
   </section>
 
