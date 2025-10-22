@@ -4,9 +4,63 @@
   <meta charset="utf-8">
   <title>HoodHelper</title>
   <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-  <h1>HoodHelper – bald live!</h1>
-  <p>Erste HTML-Seite.</p>
+  <!-- HERO -->
+  <section class="hero">
+    <h1>HoodHelper</h1>
+    <p>Your neighborhood heroes.<br>From small tasks to big help – right around the corner.</p>
+
+    <!-- SUCH-FORMULAR -->
+    <form class="search-bar" onsubmit="return false">
+      <input type="text" placeholder="What are you looking for?" required>
+      <input type="text" placeholder="Where?" required>
+      <select required>
+        <option value="">All Categories</option>
+        <option>🌱 Garden</option>
+        <option>💻 PC Help</option>
+        <option>🔧 Craftsmen</option>
+        <option>🚶 Dog Walking</option>
+      </select>
+      <button type="submit">Find</button>
+    </form>
+  </section>
+
+  <!-- HELFER-CARDS -->
+  <section class="cards">
+    <h2>Top Helpers</h2>
+    <div class="grid">
+      <!-- Card 1 -->
+      <article class="card">
+        <img src="https://i.pravatar.cc/150?img=1" alt="Parker James">
+        <div class="info">
+          <h3>Parker James</h3>
+          <div class="stars">★★★★☆ <span>3.9</span></div>
+          <p class="city">Hamburg</p>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card">
+        <img src="https://i.pravatar.cc/150?img=2" alt="Angel Morris">
+        <div class="info">
+          <h3>Angel Morris</h3>
+          <div class="stars">★★★★☆ <span>4.0</span></div>
+          <p class="city">Munich</p>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card">
+        <img src="https://i.pravatar.cc/150?img=3" alt="Eli Hall">
+        <div class="info">
+          <h3>Eli Hall</h3>
+          <div class="stars">★★★★☆ <span>4.1</span></div>
+          <p class="city">Leipzig</p>
+        </div>
+      </article>
+    </div>
+  </section>
 </body>
 </html>
