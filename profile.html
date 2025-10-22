@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Create Profile – HoodHelper</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+  <header class="top-bar">
+    <div class="logo">HoodHelper</div>
+    <nav class="nav-buttons">
+      <a href="index.html" class="btn secondary">Back</a>
+    </nav>
+  </header>
+
+  <section class="profile-card">
+    <h1>Create Your Profile</h1>
+
+    <form netlify method="POST" action="thank-you.html" enctype="multipart/form-data">
+      <!-- Personal -->
+      <label class="float-label">
+        <input type="text" name="first_name" required placeholder=" ">
+        <span>First Name *</span>
+      </label>
+      <label class="float-label">
+        <input type="text" name="last_name" required placeholder=" ">
+        <span>Last Name *</span>
+      </label>
+      <label class="float-label">
+        <input type="text" name="address" required placeholder=" ">
+        <span>Full Address *</span>
+      </label>
+
+      <!-- Profile Picture (real photo required) -->
+      <label class="upload-label">
+        Profile Picture (real photo) *
+        <input type="file" name="photo" accept="image/*" required>
+      </label>
+
+      <!-- Age & Gender -->
+      <label class="float-label">
+        <input type="number" name="age" min="16" max="99" required placeholder=" ">
+        <span>Age *</span>
+      </label>
+      <select name="gender" required>
+        <option value="">Gender *</option>
+        <option>Female</option>
+        <option>Male</option>
+        <option>Other</option>
+        <option>Prefer not to say</option>
+      </select>
+
+      <!-- Services & Pricing -->
+      <label class="float-label">
+        <textarea name="services" required placeholder=" " rows="2"></textarea>
+        <span>Services You Offer *</span>
+      </label>
+      <label class="float-label">
+        <input type="number" name="hourly_rate" min="5" max="200" required placeholder=" ">
+        <span>Hourly Rate (€) *</span>
+      </label>
+
+      <!-- Bio -->
+      <label class="float-label">
+        <textarea name="bio" required placeholder=" " rows="3"></textarea>
+        <span>Short Bio *</span>
+      </label>
+
+      <button type="submit" class="btn primary">Publish Profile</button>
+    </form>
+  </section>
+
+</body>
+</html>

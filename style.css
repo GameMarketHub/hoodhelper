@@ -292,3 +292,112 @@ body {
     font-size: .75rem;
   }
 }
+/* MINI-HERO */
+.mini-hero {
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+  background: var(--primary);
+}
+.mini-hero h1 {
+  font-size: 1.6rem;
+}
+.mini-hero p {
+  font-size: .95rem;
+  margin-top: .2rem;
+}
+
+/* COMPACT CARD */
+.compact-card {
+  max-width: 420px;
+  margin: 1.5rem auto 3rem;
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.8rem 1.5rem 2rem;
+}
+.compact-card form {
+  display: grid;
+  gap: 1rem;
+}
+.check-label {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: .85rem;
+}
+.check-label input {
+  width: auto;
+}
+.compact-card .btn {
+  justify-self: center;
+  margin-top: .25rem;
+}
+
+/* FLOAT-LABEL (wie vorher) */
+.float-label {
+  position: relative;
+}
+.float-label input {
+  width: 100%;
+  padding: .8rem 1rem;
+  font-size: 1rem;
+  border: 1.5px solid #ccc;
+  border-radius: var(--radius);
+}
+.float-label input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+.float-label span {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  padding: 0 .25rem;
+  color: #777;
+  transition: all .2s;
+  pointer-events: none;
+}
+.float-label input:not(:placeholder-shown) + span,
+.float-label input:focus + span {
+  top: 0;
+  font-size: .75rem;
+  color: var(--dark);
+}
+/* PROFILE CARD */
+.profile-card {
+  max-width: 520px;
+  margin: 2rem auto 4rem;
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2rem 1.5rem;
+}
+.profile-card h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+}
+.profile-card form {
+  display: grid;
+  gap: 1rem;
+}
+.profile-card select {
+  padding: .8rem 1rem;
+  font-size: 1rem;
+  border: 1.5px solid #ccc;
+  border-radius: var(--radius);
+}
+.upload-label {
+  font-size: .9rem;
+}
+.upload-label input {
+  display: block;
+  margin-top: .25rem;
+  font-size: 1rem;
+}
+.profile-card .btn {
+  justify-self: center;
+  margin-top: .5rem;
+}
