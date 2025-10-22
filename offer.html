@@ -15,23 +15,20 @@
     </nav>
   </header>
 
-  <!-- MINI-HERO -->
-  <section class="mini-hero">
-    <h1>Offer Services</h1>
-    <p>Join local helpers.</p>
-  </section>
+  <section class="offer-card">
+    <div class="illu">🚀</div>
+    <h2>Connect your email</h2>
+    <p class="sub">Join thousands of helpers in your neighbourhood.</p>
 
-  <!-- COMPACT CARD -->
-  <section class="compact-card">
-    <form netlify action="profile.html" method="POST">
+    <form class="pro-form" netlify action="create-profile.html" method="POST">
       <label class="float-label">
         <input type="email" name="email" required placeholder=" ">
-        <span>Email *</span>
+        <span>Email Address *</span>
       </label>
 
       <label class="check-label">
-        <input type="checkbox" name="terms" required>
-        <span>I accept the <a href="#" target="_blank">Terms of Service</a></span>
+        <input type="checkbox" required>
+        <span>I agree to the <a href="#" target="_blank">terms & conditions</a></span>
       </label>
 
       <button type="submit" class="btn primary">Continue</button>

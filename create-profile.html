@@ -15,47 +15,64 @@
     </nav>
   </header>
 
-  <section class="create-profile">
+  <section class="profile-card">
     <h1>Create Your Profile</h1>
 
-    <form class="profile-form" netlify netlify-honeypot="bot-field" method="POST" action="thank-you.html" enctype="multipart/form-data">
-      <p class="hidden">
+    <form class="profile-form" netlify method="POST" action="thank-you.html" enctype="multipart/form-data">
+      <!-- Hidden honeypot -->
+      <p style="display:none;">
         <label>Don’t fill this out: <input name="bot-field"></label>
       </p>
 
-      <!-- Personal -->
-      <label>
-        First & Last Name *
-        <input type="text" name="name" required placeholder="Max Mustermann">
+      <!-- Name -->
+      <label class="float-label">
+        <input type="text" name="first_name" required placeholder=" ">
+        <span>First Name *</span>
+      </label>
+      <label class="float-label">
+        <input type="text" name="last_name" required placeholder=" ">
+        <span>Last Name *</span>
       </label>
 
-      <label>
-        City *
-        <input type="text" name="city" required placeholder="Berlin">
+      <!-- Address -->
+      <label class="float-label">
+        <input type="text" name="address" required placeholder=" ">
+        <span>Full Address *</span>
       </label>
 
-      <!-- Profile Picture -->
-      <label>
-        Profile Picture
-        <input type="file" name="photo" accept="image/*">
+      <!-- Profile Picture (real photo required) -->
+      <label class="upload-label">
+        Profile Picture (real photo) *
+        <input type="file" name="photo" accept="image/*" required>
       </label>
 
-      <!-- Services -->
-      <label>
-        Services You Offer *
-        <textarea name="services" required placeholder="e.g. Garden work, PC help, Furniture assembly…" rows="3"></textarea>
+      <!-- Age & Gender -->
+      <label class="float-label">
+        <input type="number" name="age" min="16" max="99" required placeholder=" ">
+        <span>Age *</span>
       </label>
+      <select name="gender" required>
+        <option value="">Gender *</option>
+        <option>Female</option>
+        <option>Male</option>
+        <option>Other</option>
+        <option>Prefer not to say</option>
+      </select>
 
-      <!-- Pricing -->
-      <label>
-        Hourly Rate (€) *
-        <input type="number" name="price" min="5" max="200" required placeholder="25">
+      <!-- Services & Pricing -->
+      <label class="float-label">
+        <textarea name="services" required placeholder=" " rows="2"></textarea>
+        <span>Services You Offer *</span>
+      </label>
+      <label class="float-label">
+        <input type="number" name="hourly_rate" min="5" max="200" required placeholder=" ">
+        <span>Hourly Rate (€) *</span>
       </label>
 
       <!-- Bio -->
-      <label>
-        Tell us about yourself *
-        <textarea name="bio" required placeholder="I am a reliable craftsman with 10 years of experience…" rows="4"></textarea>
+      <label class="float-label">
+        <textarea name="bio" required placeholder=" " rows="3"></textarea>
+        <span>Short Bio *</span>
       </label>
 
       <button type="submit" class="btn primary">Publish Profile</button>
